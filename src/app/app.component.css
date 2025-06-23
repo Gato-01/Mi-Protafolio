@@ -1,0 +1,10 @@
+/* Estructura principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos el 100% del viewport */
+}
+
+.main-content {
+  flex: 1; /* Hace que este div ocupe todo el espacio disponible */
+}
