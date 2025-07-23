@@ -1,9 +1,119 @@
-.footer {
-  background-color: #201f1f;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: fixed; /* Cambiado de relative a fixed */
+/* Estilos del Footer */
+.site-footer {
+  background: #0a0a0a;
+  color: #ecf0f1;
+  padding: 2rem 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.footer-section h3 {
+  color: #d0db34;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
   bottom: 0;
-  width: 100%;
+  width: 50px;
+  height: 2px;
+  background: #fafafa;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #b7db34;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: #d8db34;
+  transform: translateX(5px);
+}
+
+.github-link:hover { color: #6e5494 !important; }
+.linkedin-link:hover { color: #0077b5 !important; }
+.twitter-link:hover { color: #1da1f2 !important; }
+.email-link:hover { color: #d44638 !important; }
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+    color: #b7db34;
+}
+
+/* Iconos de Font Awesome (asegúrate de incluirlo en tu proyecto) */
+.fab, .fas {
+  font-size: 1.2rem;
+  width: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-links {
+    align-items: center;
+  }
 }
