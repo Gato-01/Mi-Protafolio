@@ -1,0 +1,139 @@
+/* Estilos generales */
+.bases-datos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.introduccion-db {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.db-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.db-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.db-divider {
+  height: 3px;
+  width: 100px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  margin: 0.8rem auto;
+  border-radius: 3px;
+}
+
+.db-content {
+  line-height: 1.7;
+}
+
+.db-text {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.db-highlight {
+  background-color: rgba(52, 152, 219, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #2980b9;
+}
+
+.db-quote {
+  border-left: 4px solid #2ecc71;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: rgba(46, 204, 113, 0.05);
+  font-style: italic;
+  color: #34495e;
+}
+
+.db-quote p {
+  margin: 0;
+}
+
+.db-icon {
+  font-size: 2.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.introduccion h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Secciones alternadas */
+.seccion {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+
+.seccion:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.contenido {
+  flex: 1;
+}
+
+.imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Consultas SQL */
+.ejemplos {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+pre {
+  background: #282c34;
+  color: #abb2bf;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion {
+    flex-direction: column;
+  }
+  .seccion:nth-child(even) {
+    flex-direction: column;
+  }
+}
+

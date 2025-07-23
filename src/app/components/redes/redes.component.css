@@ -1,0 +1,38 @@
+.redes-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* Fondo claro para contraste */
+}
+
+.seccion {
+  padding: 3rem;
+  min-height: 50vh; /* Mitad de la altura visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seccion-izquierda {
+  background-color: #ffffff; /* Fondo blanco */
+  align-items: flex-start; /* Alinea contenido a la izquierda */
+  text-align: left;
+}
+
+.seccion-derecha {
+  background-color: #e9f5ff; /* Fondo azul claro */
+  align-items: flex-end; /* Alinea contenido a la derecha */
+  text-align: right;
+}
+
+.seccion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.seccion p {
+  font-size: 1.1rem;
+  max-width: 600px; /* Evita líneas muy largas */
+}
