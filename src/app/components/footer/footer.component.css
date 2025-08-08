@@ -23,7 +23,7 @@
 }
 
 .footer-section h3 {
-  color: #d0db34;
+  color: #db3434;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   position: relative;
@@ -56,7 +56,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #b7db34;
+  color: #db3434;
 }
 
 .social-links {
@@ -75,13 +75,13 @@
 }
 
 .social-links a:hover {
-  color: #d8db34;
+  color: #db3434;
   transform: translateX(5px);
 }
 
-.github-link:hover { color: #6e5494 !important; }
-.linkedin-link:hover { color: #0077b5 !important; }
-.twitter-link:hover { color: #1da1f2 !important; }
+.github-link:hover { color: #d44638 !important; }
+.linkedin-link:hover { color: #d44638 !important; }
+.twitter-link:hover { color: #d44638!important; }
 .email-link:hover { color: #d44638 !important; }
 
 .footer-bottom {
@@ -89,7 +89,7 @@
   padding: 1rem 0;
   background: rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
-    color: #b7db34;
+    color: #db3434;
 }
 
 /* Iconos de Font Awesome (asegúrate de incluirlo en tu proyecto) */

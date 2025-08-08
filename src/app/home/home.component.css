@@ -25,7 +25,7 @@
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #ffffff, #d9e52e);
+  background: linear-gradient(45deg, #e20202, #e64900);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -42,4 +42,20 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.text_I{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  color: #f1f1ec;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
 }

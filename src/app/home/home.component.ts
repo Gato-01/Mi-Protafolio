@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-backgroundImageUrl: string = 'https://images.pexels.com/photos/114820/pexels-photo-114820.jpeg';
+backgroundImageUrl: string = 'https://images.pexels.com/photos/33314204/pexels-photo-33314204.jpeg';
 }

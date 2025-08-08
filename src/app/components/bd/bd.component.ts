@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './bd.component.css'
 })
 export class BDComponent {
-
+  mostrarModalSql: boolean = false;
+  mostrarModalMongo: boolean = false;
 }
+
+

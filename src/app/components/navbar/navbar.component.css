@@ -52,3 +52,9 @@
 .navbar a.active {
   background-color: #007bff;
 }
+
+
+ .main-content {
+  margin-top: 60px; /* Igual a la altura de tu navbar */
+  min-height: calc(100vh - 60px); /* Opcional: para que ocupe el resto de la pantalla */
+}

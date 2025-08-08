@@ -26,37 +26,212 @@
   </div>
 </section>
 
+ <div class="bases-datos-container">
+
   <!-- Sección SQL Server -->
   <section class="seccion sql-server">
-    <div class="contenido">
-      <h3>SQL Server Management Studio</h3>
-      <p>Microsoft SQL Server es un sistema de gestión de bases de datos relacionales (RDBMS) robusto y escalable. </p>
-      <p>Desarrollo de aplicativo en Java-Maven con una conexion SQL Management donde teniamos un inicio de sesion y unas consultas directas a la base de datos
-        Condultas CRUD (crear, leer, actualizar y eliminar) para gestionar datos de usuarios, productos, pedidos y demás,  Funciones Agregadas como SUM, AVG, COUNT para obtener estadísticas de ventas, usuarios activos, etc..
-      </p>
-      <ul>
-        <li>Arquitectura</li>
-        <li>Herramientas (SSMS, Azure Data Studio)</li>
-      </ul>
-    </div>
     <div class="imagen">
       <img src="https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg" alt="SQL Server">
     </div>
-  </section>
-
-  <!-- Sección MySQL -->
-  <section class="seccion mysql">
-    <div class="imagen">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&amp;s" class="sFlh5c FyHeAf" alt="What is MYSQL ? - Techorigine IT Solution" jsname="JuXqh" style="max-width:1140px;" data-ilt="1753300636315">
-    </div>
+    
     <div class="contenido">
-      <h3>MySQL</h3>
-      <p>MySQL es un RDBMS open-source ampliamente utilizado en aplicaciones web, Mysql se uso en un proyecto de la universidad para dar inicio de sesion a un aplicativo web
-        en este caso la conecion fue Angular, Node.js, la conexion tenia que manejar CRUD (crear, leer, actualizar y eliminar) para gestionar datos de usuarios ..</p>
+      <h3>SQL Server Management Studio</h3>
+      <p>Microsoft SQL Server es un sistema de gestión de bases de datos relacionales robusto y escalable.</p>
+      <button class="btn-ver-detalles" (click)="mostrarModalSql = true">Ver detalles técnicos</button>
     </div>
   </section>
 
-  <!-- Sección Modelo Entidad-Relación -->
+  
+
+  <!-- Modal SQL Server (HTML puro) -->
+  <div *ngIf="mostrarModalSql" class="modal-sql" (click)="mostrarModalSql = false">
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <button class="cerrar-modal" (click)="mostrarModalSql = false">&times;</button>
+      
+      <h3>Experiencia con SQL Server</h3>
+      
+      <div class="seccion-modal">
+        <h4>Implementaciones clave:</h4>
+        <ul>
+          <li>Creacion de tablas - relacion entre ellas</li>
+          <li>C.R.U.D (CREATE, READ, UPDATE, DELETE)</li>
+          <li>Versiones: 2019</li>
+          <li>Optimización de consultas complejas</li>
+          <li>Manejo de datos a gran escala</li>
+        </ul>
+      </div>
+      
+      <div class="seccion-modal">
+        <h4>Ejemplo de Creacion y insercion de datos:</h4>
+        <p>En SQL los tipos de datos son como las “etiquetas” que le ponemos a cada columna para indicarle a la base de datos qué tipo de información puede guardar y cómo debe manejarla. Estos son algunos:</p>
+        <ul>
+          <li>Int/Integer</li>
+          <li>Bigint</li>
+          <li>Char</li>
+          <li>Varchar</li>
+          <li>DateTime</li>
+        </ul>
+        <div class="codigo-sql">
+          <pre><code>CREATE TABLE pedidos (
+    id_pedido INT PRIMARY KEY IDENTITY(1,1),
+    id_usuario INT NOT NULL,
+    producto VARCHAR(100) NOT NULL,
+    cantidad INT NOT NULL,
+    fecha_pedido DATE DEFAULT GETDATE(),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id) -- Asume que usuario tiene columna 'id'
+);
+
+INSERT INTO pedidos (id_usuario, producto, cantidad) 
+VALUES (2, 'Laptop', 1),  -- Asume que usuario con id=1 existe
+       (4, 'Teléfono', 2),
+       (5, 'Tablet', 1);</code></pre>
+        </div>
+      </div>
+      
+      <div class="seccion-modal">
+<h4>C.R.U.D:</h4>
+<p>
+CRUD <strong>(Create, Read, Update, Delete)</strong> son las operaciones fundamentales para el manejo de cualquier base de datos. 
+Permiten crear nuevos registros, leer o consultar información, actualizar datos existentes y eliminar registros. 
+Con estas acciones se cubre la gestión básica y esencial de los datos.
+</p>
+        <div class="codigo-sql">
+          <pre><code>select * from pedidos;
+update pedidos set producto = 'relojSmart' where id_pedido = 4; 
+delete from pedidos where id_pedido=5; </code></pre>
+        </div>
+        <div class="seccion-modal">
+      <h4>INNER JOIN, LEFT JOIN y RIGHT JOIN:</h4>
+<p>
+Son tipos de combinaciones de tablas que permiten unir datos de dos o más tablas mediante una columna en común. 
+El <strong>INNER JOIN</strong> devuelve solo los registros que tienen coincidencia en ambas tablas.  
+El <strong>LEFT JOIN</strong> devuelve todos los registros de la tabla izquierda y solo las coincidencias de la tabla derecha.  
+El <strong>RIGHT JOIN</strong> hace lo opuesto: devuelve todos los registros de la tabla derecha y solo las coincidencias de la izquierda.  
+Estas uniones facilitan obtener información más completa y detallada en una consulta.
+</p>
+<p><strong>INNER JOIN</strong> </p>
+<p>Ejemplo de INNER JOIN: tengo tabla usuario y pedidos</p>
+        <div class="codigo-sql">
+          <pre><code>select u.nombre, u.email, p.producto, p.cantidad, p.fecha_pedido
+	  from usuario u
+	  inner join pedidos p on u.id = p.id_usuario;  </code></pre>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+
+      
+
+
+
+
+  <!-- Sección SQL Server -->
+  <section class="seccion sql-server">
+    <div class="imagen">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&amp;s" alt="SQL Server">
+      
+    </div>
+    
+    <div class="contenido">
+      <h3>MySQL Workbench</h3>
+      <p>
+MySQL es un sistema de gestión de bases de datos relacional que utiliza el lenguaje SQL (Structured Query Language) para almacenar, organizar y consultar información. 
+Es rápido, fiable y muy usado en aplicaciones web y sistemas de todo tipo.
+</p>
+      <button class="btn-ver-detalles" (click)="mostrarModalMongo = true">Ver detalles técnicos</button>
+    </div>
+  </section>
+  <div *ngIf="mostrarModalMongo" class="modal-sql" (click)="mostrarModalMongo = false">
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <button class="cerrar-modal" (click)="mostrarModalMongo = false">&times;</button>
+      
+      <h3>Experiencia con SQL Server</h3>
+      
+      <div class="seccion-modal">
+        <h4>Implementaciones clave:</h4>
+        <ul>
+          <li>Creacion de tablas - relacion entre ellas</li>
+          <li>C.R.U.D (CREATE, READ, UPDATE, DELETE)</li>
+          <li>Optimización de consultas complejas</li>
+          <li>Manejo de datos a gran escala</li>
+        </ul>
+      </div>
+      
+      <div class="seccion-modal">
+        <h4>Ejemplo de Creacion y insercion de datos:</h4>
+        <p>En SQL los tipos de datos son como las “etiquetas” que le ponemos a cada columna para indicarle a la base de datos qué tipo de información puede guardar y cómo debe manejarla. Estos son algunos:</p>
+        <ul>
+          <li>Int/Integer</li>
+          <li>Bigint</li>
+          <li>Booleanos</li>
+          <li>Varchar</li>
+          <li>DateTime</li>
+        </ul>
+        <div class="codigo-sql">
+          <pre><code>CREATE TABLE addresses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    street VARCHAR(100),
+    city VARCHAR(50),
+    country VARCHAR(50),
+    FOREIGN KEY (user_id) REFERENCES users(ID)
+);
+
+INSERT INTO addresses (user_id, street, city, country) VALUES
+(1, 'Calle 123', 'Bogotá', 'Colombia'),
+(2, 'Av. Siempre Viva 742', 'Medellín', 'Colombia'),
+(3, 'Carrera 45 #12', 'Cali', 'Colombia'),
+(1, 'Calle Falsa 456', 'Bogotá', 'Colombia'); </code></pre>
+        </div>
+      </div>
+      
+      <div class="seccion-modal">
+<h4>C.R.U.D:</h4>
+<p>
+CRUD <strong>(Create, Read, Update, Delete)</strong> son las operaciones fundamentales para el manejo de cualquier base de datos. 
+Permiten crear nuevos registros, leer o consultar información, actualizar datos existentes y eliminar registros. 
+Con estas acciones se cubre la gestión básica y esencial de los datos.
+</p>
+        <div class="codigo-sql">
+          <pre><code>select * from addresses ; 
+update addresses set city='Cali' where id=1; 
+delete from addresses where id=4;  </code></pre>
+        </div>
+        <div class="seccion-modal">
+      <h4>INNER JOIN, LEFT JOIN y RIGHT JOIN:</h4>
+<p>
+Son tipos de combinaciones de tablas que permiten unir datos de dos o más tablas mediante una columna en común. 
+El <strong>INNER JOIN</strong> devuelve solo los registros que tienen coincidencia en ambas tablas.  
+El <strong>LEFT JOIN</strong> devuelve todos los registros de la tabla izquierda y solo las coincidencias de la tabla derecha.  
+El <strong>RIGHT JOIN</strong> hace lo opuesto: devuelve todos los registros de la tabla derecha y solo las coincidencias de la izquierda.  
+Estas uniones facilitan obtener información más completa y detallada en una consulta.
+</p>
+<p><strong>INNER JOIN</strong> </p>
+<p>Ejemplo de INNER JOIN</p>
+        <div class="codigo-sql">
+          <pre><code>SELECT u.email, a.street, a.city
+FROM users u
+INNER JOIN addresses a ON u.id = a.user_id; </code></pre>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+ 
+</div>
+
+ <!-- Sección Modelo Entidad-Relación -->
   <section class="seccion modelo-er">
     <div class="contenido">
       <h3>Modelo Entidad-Relación</h3>
@@ -66,15 +241,4 @@
       <img src="https://economipedia.com/wp-content/uploads/Modelo-relacional-1.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 882px; width: 558px; height: 203px; margin: 0px;" alt="Modelo relacional | Economipedia" jsname="kn3ccd">
     </div>
   </section>
-
-  <!-- Sección Consultas -->
-  <section class="seccion consultas">
-    <h3>Consultas SQL</h3>
-    <div class="ejemplos">
-      <h4>Ejemplos básicos:</h4>
-      <pre><code>SELECT * FROM usuarios WHERE activo = 1;</code></pre>
-      <h4>Avanzadas:</h4>
-      <pre><code>JOIN, GROUP BY, subconsultas...</code></pre>
-    </div>
-  </section>
-</div>
+  

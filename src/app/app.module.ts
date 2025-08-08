@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { BDComponent } from './components/bd/bd.component';
+import { AngularComponent } from './components/angular/angular.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BDComponent } from './components/bd/bd.component';
     AboutComponent,
     FooterComponent,
     RedesComponent,
-    BDComponent
+    BDComponent,
+    AngularComponent
   ],
   imports: [
     BrowserModule,
