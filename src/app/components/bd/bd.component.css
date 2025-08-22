@@ -4,15 +4,22 @@
   margin: 0 auto;
   padding: 2rem;
 }
-
+ 
 .introduccion-db {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
+            max-width: 100%;
+            margin: 2rem 0;
+            padding: 3rem 2rem;
+            background-image: url('https://images.pexels.com/photos/7947754/pexels-photo-7947754.jpeg');
+            background-size: rgb(247, 246, 246);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            }
 
 .db-header {
   text-align: center;
@@ -42,17 +49,21 @@
 
 .db-text {
   font-size: 1.1rem;
-  color: #495057;
+  color: #000000;
   margin-bottom: 1.2rem;
   text-align: justify;
 }
 
+.TituloI{
+  color: black;
+}
+
 .db-highlight {
-  background-color: rgba(52, 152, 219, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-weight: 600;
-  color: #2980b9;
+  color: #000000;
 }
 
 .db-quote {
@@ -91,10 +102,10 @@
   margin: 4rem 0;
   gap: 2rem;
 }
-
+/*
 .seccion:nth-child(even) {
   flex-direction: row-reverse;
-}
+}*/
 
 .contenido {
   flex: 1;
@@ -231,6 +242,8 @@ pre {
 }
 
 
+
+
 /* Estructura del modal */
 .modal-sql {
   position: fixed;
@@ -319,3 +332,6 @@ pre {
 .cerrar-modal:hover {
   color: #333;
 }
+
+
+

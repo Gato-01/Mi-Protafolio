@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { BDComponent } from './components/bd/bd.component';
 import { AngularComponent } from './components/angular/angular.component';
+import { GitHubComponent } from './components/git-hub/git-hub.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AngularComponent } from './components/angular/angular.component';
     FooterComponent,
     RedesComponent,
     BDComponent,
-    AngularComponent
+    AngularComponent,
+    GitHubComponent
   ],
   imports: [
     BrowserModule,

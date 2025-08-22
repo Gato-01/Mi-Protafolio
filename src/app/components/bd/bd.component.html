@@ -1,32 +1,16 @@
 <div class="bases-datos-container">
   <!-- Introducción -->
-<section class="introduccion-db dark-section">
-  <div class="db-header">
-    <h2 class="db-title"><span class="db-icon">📊</span> Bases de Datos</h2>
-    <div class="db-divider"></div>
-  </div>
+<section class="introduccion-db">
+  <h2 class="TituloI">Bases de datos</h2>
   
-  <div class="db-content">
-    <p class="db-text">
-      Las bases de datos son el <strong>corazón de los sistemas modernos</strong>, permitiendo el almacenamiento estructurado, 
-      la gestión eficiente y la recuperación ágil de información. 
-    </p>
-    
-    <p class="db-text">
-      A lo largo de mi carrera profesional, he trabajado profundamente con tecnologías como 
-      <span class="db-highlight">SQL Server</span>, <span class="db-highlight">MySQL</span>, 
-      <span class="db-highlight">modelos Entidad-Relación</span> y 
-      <span class="db-highlight">consultas avanzadas</span>, dominando tanto los fundamentos teóricos 
-      como las mejores prácticas de implementación.
-    </p>
-    
-    <div class="db-quote">
-      <p>"Los datos son el nuevo oro, y las bases de datos son la mina donde lo extraemos"</p>
-    </div>
-  </div>
+  <p class="db-text"> 
+      A lo largo de mi carrera profesional, he trabajado profundamente con tecnologías como, <span class="db-highlight">SQL Server</span>, <span class="db-highlight">MySQL</span>,        <span class="db-highlight">modelos Entidad-Relación</span> y  
+      <span class="db-highlight">consultas avanzadas</span>, dominando tanto los fundamentos teóricos  
+      como las mejores prácticas de implementación. 
+    </p> 
 </section>
 
- <div class="bases-datos-container">
+<div class="bases-datos-container">
 
   <!-- Sección SQL Server -->
   <section class="seccion sql-server">
@@ -38,9 +22,19 @@
       <h3>SQL Server Management Studio</h3>
       <p>Microsoft SQL Server es un sistema de gestión de bases de datos relacionales robusto y escalable.</p>
       <button class="btn-ver-detalles" (click)="mostrarModalSql = true">Ver detalles técnicos</button>
+      <button class="ver-detalles" (click)="mostrarImal= true">Ver detalles técnicos</button>
     </div>
   </section>
-
+  </div>
+  
+  <div *ngIf="mostrarImal" class="modal-sql" (click)="mostrarImal">
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <button class="cerrar-modal" (click)="mostrarModalSql = false">&times;</button>
+  
+  
+  
+    </div>
+</div>
   
 
   <!-- Modal SQL Server (HTML puro) -->
@@ -50,7 +44,7 @@
       
       <h3>Experiencia con SQL Server</h3>
       
-      <div class="seccion-modal">
+      <div class="modal-contenido">
         <h4>Implementaciones clave:</h4>
         <ul>
           <li>Creacion de tablas - relacion entre ellas</li>
@@ -126,15 +120,13 @@ Estas uniones facilitan obtener información más completa y detallada en una co
 </div>
 
 
-
-
       
 
 
 
 
   <!-- Sección SQL Server -->
-  <section class="seccion sql-server">
+  <section class="seccion mysql-workbench">
     <div class="imagen">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&amp;s" alt="SQL Server">
       
@@ -149,6 +141,7 @@ Es rápido, fiable y muy usado en aplicaciones web y sistemas de todo tipo.
       <button class="btn-ver-detalles" (click)="mostrarModalMongo = true">Ver detalles técnicos</button>
     </div>
   </section>
+
   <div *ngIf="mostrarModalMongo" class="modal-sql" (click)="mostrarModalMongo = false">
     <div class="modal-contenido" (click)="$event.stopPropagation()">
       <button class="cerrar-modal" (click)="mostrarModalMongo = false">&times;</button>
@@ -225,84 +218,7 @@ INNER JOIN addresses a ON u.id = a.user_id; </code></pre>
       </div>
     </div>
   </div>
-
-  
-
-</div>
-
-
-  <!-- Sección Power BI -->
-  <section class="seccion sql-server">
-    <div class="imagen">
-      <img src="https://datascientest.com/es/files/2020/10/power-bi-logo-1.jpg" alt="SQL Server">
-
-      
-    </div>
-    
-    <div class="contenido">
-      <h3>Power BI</h3>
-      <p>Power BI es una plataforma de análisis empresarial (Business Intelligence) de Microsoft que permite a los usuarios visualizar datos, compartirlos y colaborar en informes y paneles interactivos. Es una herramienta versátil que facilita la transformación de datos en información procesable. </p>
-      <button class="btn-ver-detalles" (click)="mostrarModalSql = true">Ver detalles técnicos</button>
-    </div>
-  </section>
-
-    <!-- Modal SQL Server (HTML puro) -->
-  <div *ngIf="mostrarModalSql" class="modal-sql" (click)="mostrarModalSql = false">
-    <div class="modal-contenido" (click)="$event.stopPropagation()">
-      <button class="cerrar-modal" (click)="mostrarModalSql = false">&times;</button>
-      
-      <h3>Experiencia con Power BI</h3>
-      
-      <div class="seccion-modal">
-        <h4>Experencia de extracion-limpieza de datos con power BI</h4>
-        <ul>
-          <li>GD - Get data - Obtener datos</li>
-          <li>DP - Data preparation - Preparacion de datos</li>
-          <li>DM - Data Modeling - Estrucutras y Modelos</li>
-          <li>DV - Data visualization - Representación de datos</li>
-          <li>DR - Data Reporting</li>
-        </ul>
-      </div>
-      
-      <div class="seccion-modal">
-        <h4><strong>GD - Get data - Obtener datos</strong></h4>
-        <p>Es la función con que empezamos cada proyecto debido a que con ella integramos los datos que serán necesarios en nuestro reporte. Esta Función no solo se utiliza al inicio de cada proyecto sino cada vez que sea requerido integrar mas fuentes de datos.</p>
-        <ul>
-          <li>GET DATA: Obtener datos, realizar consultas, importar datos, conexiones a datos</li>
-          <li>Excel</li>
-          <li>PDF</li>
-          <li>Documentos de texto</li>
-          <li>SQL</li>
-          <li>Access</li>
-        </ul>
-        <p><strong>Fuente de datos:</strong> Cualquier ruta o destino que cuente con registros provenientes de documentos o archivos digitales del tipo Excel, PDF, Sitios Web, Bases de datos/Servidores, Servicios en linea,etc </p>
-      <p><strong>Tips</strong></p>
-      <ul>
-          <li>Organizar una estructura</li>
-          <li>definir nombres consistentes</li>          
-      </ul>
-            
-<h4><strong>DP - Data Preparation - Preparación de datos </strong></h4>
-<p>
-El Query editor o editor de consultas, es donde se hacen los ajustes correspondientes a las tablas y sus registros para que power BI los reconozca y posteriormente ser utilizados en el reporte. Corrección y limpieza de datos.  
-</p>
-<ul>
-  <li><strong>Tipo de datos de los capos:</strong></li>
-  <li>Nuevos registros en fuentes de datos</li>
-    <li>Click Actualizar</li>
-      <li>Se Aplican pasos grabados</li>
-        <li>Nuevos datos con estrcutura deseada</li>
-</ul>
-<p><strong>Consideraciónes:</strong>Transformas, AddColumn</p>
-
-      </div>
-    </div>
-  </div>
-
-  
-
-</div>
-
+ </div>
 
  
 </div>

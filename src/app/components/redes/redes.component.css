@@ -18,6 +18,7 @@
   background-color: #ffffff; /* Fondo blanco */
   align-items: flex-start; /* Alinea contenido a la izquierda */
   text-align: left;
+    background-image: url('https://images.pexels.com/photos/1624895/pexels-photo-1624895.jpeg');
 }
 
 .seccion-derecha {
