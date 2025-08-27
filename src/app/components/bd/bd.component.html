@@ -1,7 +1,7 @@
 <div class="bases-datos-container">
   <!-- Introducción -->
 <section class="introduccion-db">
-  <h2 class="TituloI">Bases de datos</h2>
+  <h2 class="TituloI">Bases de datos relacionales</h2>
   
   <p class="db-text"> 
       A lo largo de mi carrera profesional, he trabajado profundamente con tecnologías como, <span class="db-highlight">SQL Server</span>, <span class="db-highlight">MySQL</span>,        <span class="db-highlight">modelos Entidad-Relación</span> y  
@@ -22,27 +22,31 @@
       <h3>SQL Server Management Studio</h3>
       <p>Microsoft SQL Server es un sistema de gestión de bases de datos relacionales robusto y escalable.</p>
       <button class="btn-ver-detalles" (click)="mostrarModalSql = true">Ver detalles técnicos</button>
-      <button class="ver-detalles" (click)="mostrarImal= true">Ver detalles técnicos</button>
+      <button class="btn-ver-detalles" (click)="mostrarImal = true">Ver detalles técnicos</button>
     </div>
   </section>
   </div>
-  
-  <div *ngIf="mostrarImal" class="modal-sql" (click)="mostrarImal">
+
+  <div *ngIf="mostrarImal" class="modal-sql" (click)="mostrarImal = false">
     <div class="modal-contenido" (click)="$event.stopPropagation()">
-      <button class="cerrar-modal" (click)="mostrarModalSql = false">&times;</button>
+      <button class="cerrar-modal" (click)="mostrarImal = false">&times;</button>
   
-  
-  
+          <h3>SQL Server</h3>
+            
+
     </div>
-</div>
   
 
-  <!-- Modal SQL Server (HTML puro) -->
+</div>
+
+
+
+  <!-- Modal MySQL Server (HTML puro) -->
   <div *ngIf="mostrarModalSql" class="modal-sql" (click)="mostrarModalSql = false">
     <div class="modal-contenido" (click)="$event.stopPropagation()">
       <button class="cerrar-modal" (click)="mostrarModalSql = false">&times;</button>
       
-      <h3>Experiencia con SQL Server</h3>
+      <h3>Experiencia con SQL SERVER</h3>
       
       <div class="modal-contenido">
         <h4>Implementaciones clave:</h4>
@@ -134,19 +138,31 @@ Estas uniones facilitan obtener información más completa y detallada en una co
     
     <div class="contenido">
       <h3>MySQL Workbench</h3>
-      <p>
-MySQL es un sistema de gestión de bases de datos relacional que utiliza el lenguaje SQL (Structured Query Language) para almacenar, organizar y consultar información. 
-Es rápido, fiable y muy usado en aplicaciones web y sistemas de todo tipo.
-</p>
-      <button class="btn-ver-detalles" (click)="mostrarModalMongo = true">Ver detalles técnicos</button>
-    </div>
+      <p>MySQL es un sistema de gestión de bases de datos relacional que utiliza el lenguaje SQL (Structured Query Language) para almacenar, organizar y consultar información. 
+      Es rápido, fiable y muy usado en aplicaciones web y sistemas de todo tipo.</p>
+      <button class="btn-ver-detalles" (click)="mostrarModalMysql= true">Ver detalles técnicos</button>
+      <button class="btn-ver-detalles" (click)="mostrarImalMy = true">Ver detalles técnicos</button>
+    
+    </div>    
   </section>
 
-  <div *ngIf="mostrarModalMongo" class="modal-sql" (click)="mostrarModalMongo = false">
+  <div *ngIf="mostrarImalMy" class="modal-sql" (click)="mostrarImalMy = false">
     <div class="modal-contenido" (click)="$event.stopPropagation()">
-      <button class="cerrar-modal" (click)="mostrarModalMongo = false">&times;</button>
+      <button class="cerrar-modal" (click)="mostrarImalMy = false">&times;</button>
+  
+          <h3>Mysql</h3>
+            
+
+    </div>
+  
+
+</div>
+
+  <div *ngIf="mostrarModalMysql" class="modal-sql" (click)="mostrarModalMysql = false">
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <button class="cerrar-modal" (click)="mostrarModalMysql = false">&times;</button>
       
-      <h3>Experiencia con SQL Server</h3>
+      <h3>Experiencia con MySQL-Workbench</h3>
       
       <div class="seccion-modal">
         <h4>Implementaciones clave:</h4>
@@ -219,18 +235,122 @@ INNER JOIN addresses a ON u.id = a.user_id; </code></pre>
     </div>
   </div>
  </div>
+<section class="introduccion-db2">
+  <h2 class="TituloI">Bases de datos No relacionales (No SQL)</h2>
+  
+  <p class="db-text"> 
+    He trabajado con bases no relacionales, Nosql como lo es, <span class="db-highlight">MONGO DB COMPASS</span>, <span class="db-highlight">SHELL MONGO</span>,     <span class="db-highlight">modelos Entidad-Relación</span> y  
+    dominando tanto los fundamentos teóricos como las mejores prácticas de implementación. 
+    </p> 
+</section>
 
- 
+<section class="seccion sql-server">
+    <div class="imagen">
+      <img src="//images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170944.png">
+    </div>
+    
+    <div class="contenido">
+      <h3>Mongo COMPASS</h3>
+      <p>Mongo es una base de datos de tipos NoSql. Base de datos de documentos de codigo abierto. Manejo de datos flexiblesy escalables. Se basa en documentos en formato BSON <strong>(Binario JSON).</strong></p>
+      <button class="btn-ver-detalles" (click)="mostrarMo = true">Ver detalles técnicos</button>
+      <button class="btn-ver-detalles" (click)=" mostrarImalMo = true">Fotos</button>
+      </div>
+    </section>
+  
+    <div *ngIf="mostrarImalMo" class="modal-sql" (click)="mostrarImalMo = false">
+      <div class="modal-contenido" (click)="$event.stopPropagation()">
+        <button class="cerrar-modal" (click)="mostrarMo = false">&times;</button>
+      <h3>Mongo</h3>
+    </div>
+
 </div>
 
- <!-- Sección Modelo Entidad-Relación -->
-  <section class="seccion modelo-er">
-    <div class="contenido">
-      <h3>Modelo Entidad-Relación</h3>
-      <p>Diseño conceptual de bases de datos usando diagramas ER...</p>
+
+    <!-- Modal corregido -->
+<div *ngIf="mostrarMo" class="modal-sql" (click)="mostrarMo = false">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <button class="cerrar-modal" (click)="mostrarModalMongo = false">&times;</button>
+    <h3>Mongo Compass</h3>
+        <p>Mongo DB es una base de datos No-SQL, lo que significa que no utiliza la estructura relacional tradicional basada en tablas de bases de datos como Mysql, PosgresSql, en lugar, utiliza un modelo orientado a docuemntos<strong>, flexibles y potente.</strong> </p>
+        <div class="seccion-modal">
+        <h4>Implementaciones clave:</h4>
+        <ul>
+          <li>Documentos</li>
+          <li>C.R.U.D (CREATE, READ, UPDATE, DELETE)</li>
+          <li>Escalabilidad horizontal</li>
+          <li>Colección</li>
+          <li>JSON-BSON</li>
+          <li>Tipos de datos</li>
+        </ul>
+      </div>
+      
+      <div class="seccion-modal">
+        <h4>Creacion de bases de datos:</h4>
+        <img src="assets.Mong1.png" alt="Logo">
+        <p>En SQL los tipos de datos son como las “etiquetas” que le ponemos a cada columna para indicarle a la base de datos qué tipo de información puede guardar y cómo debe manejarla. Estos son algunos:</p>
+        <ul>
+          <li>Int/Integer</li>
+          <li>Bigint</li>
+          <li>Booleanos</li>
+          <li>Varchar</li>
+          <li>DateTime</li>
+        </ul>
+        <div class="codigo-sql">
+          <pre><code>CREATE TABLE addresses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    street VARCHAR(100),
+    city VARCHAR(50),
+    country VARCHAR(50),
+    FOREIGN KEY (user_id) REFERENCES users(ID)
+);
+
+INSERT INTO addresses (user_id, street, city, country) VALUES
+(1, 'Calle 123', 'Bogotá', 'Colombia'),
+(2, 'Av. Siempre Viva 742', 'Medellín', 'Colombia'),
+(3, 'Carrera 45 #12', 'Cali', 'Colombia'),
+(1, 'Calle Falsa 456', 'Bogotá', 'Colombia'); </code></pre>
+        </div>
+      </div>
+      
+      <div class="seccion-modal">
+<h4>C.R.U.D:</h4>
+<p>
+CRUD <strong>(Create, Read, Update, Delete)</strong> son las operaciones fundamentales para el manejo de cualquier base de datos. 
+Permiten crear nuevos registros, leer o consultar información, actualizar datos existentes y eliminar registros. 
+Con estas acciones se cubre la gestión básica y esencial de los datos.
+</p>
+        <div class="codigo-sql">
+          <pre><code>select * from addresses ; 
+update addresses set city='Cali' where id=1; 
+delete from addresses where id=4;  </code></pre>
+        </div>
+        <div class="seccion-modal">
+      <h4>INNER JOIN, LEFT JOIN y RIGHT JOIN:</h4>
+<p>
+Son tipos de combinaciones de tablas que permiten unir datos de dos o más tablas mediante una columna en común. 
+El <strong>INNER JOIN</strong> devuelve solo los registros que tienen coincidencia en ambas tablas.  
+El <strong>LEFT JOIN</strong> devuelve todos los registros de la tabla izquierda y solo las coincidencias de la tabla derecha.  
+El <strong>RIGHT JOIN</strong> hace lo opuesto: devuelve todos los registros de la tabla derecha y solo las coincidencias de la izquierda.  
+Estas uniones facilitan obtener información más completa y detallada en una consulta.
+</p>
+<p><strong>INNER JOIN</strong> </p>
+<p>Ejemplo de INNER JOIN</p>
+        <div class="codigo-sql">
+          <pre><code>SELECT u.email, a.street, a.city
+FROM users u
+INNER JOIN addresses a ON u.id = a.user_id; </code></pre>
+    
+        </div>
+      </div>
     </div>
-    <div class="imagen">
-      <img src="https://economipedia.com/wp-content/uploads/Modelo-relacional-1.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 882px; width: 558px; height: 203px; margin: 0px;" alt="Modelo relacional | Economipedia" jsname="kn3ccd">
-    </div>
-  </section>
+  </div>
+</div>
   
+  </div>
+
+
+
+
+
+

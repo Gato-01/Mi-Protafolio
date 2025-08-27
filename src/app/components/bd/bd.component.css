@@ -1,14 +1,13 @@
-/* Estilos generales */
 .bases-datos-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
- 
+
 .introduccion-db {
-            max-width: 100%;
+            max-width: 200%;
             margin: 2rem 0;
-            padding: 3rem 2rem;
+            padding: 6rem 5rem;
             background-image: url('https://images.pexels.com/photos/7947754/pexels-photo-7947754.jpeg');
             background-size: rgb(247, 246, 246);
             background-size: cover;
@@ -20,6 +19,21 @@
             position: relative;
             overflow: hidden;
             }
+
+.introduccion-db2 {
+      margin: 2rem 0;
+      padding: 6rem 5rem;
+      background-image: url('https://images.pexels.com/photos/7947754/pexels-photo-7947754.jpeg');
+      background-size: rgb(247, 246, 246);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            color: white;
+            position: relative;
+            overflow: hidden;
+}
 
 .db-header {
   text-align: center;
@@ -55,7 +69,7 @@
 }
 
 .TituloI{
-  color: black;
+  color: rgb(33, 13, 212);
 }
 
 .db-highlight {
@@ -304,6 +318,7 @@ pre {
 /* Botones */
 .btn-ver-detalles {
   background: #0067b8;
+ 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -313,9 +328,9 @@ pre {
   font-size: 1rem;
   transition: background 0.3s;
 }
-
-.btn-ver-detalles:hover {
-  background: #005aa7;
+/* O si prefieres un espacio después del primer botón */
+.btn-ver-detalles:not(:last-child) {
+  margin-right: 15px;
 }
 
 .cerrar-modal {

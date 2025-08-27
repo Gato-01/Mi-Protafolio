@@ -9,8 +9,11 @@ import { Component } from '@angular/core';
 export class BDComponent {
   mostrarModalSql: boolean = false;
   mostrarModalMongo: boolean = false;
-
   mostrarImal: boolean = false;
+  mostrarImalMy: boolean = false;
+  mostrarModalMysql: boolean = false;
+  mostrarImalMo: boolean = false;
+  mostrarMo: boolean = false;
   
 }
 
